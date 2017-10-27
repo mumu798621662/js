@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="sence">
+      <div class="kaishi">开始游戏</div>
+      <div class="tupian">
+          <img src="img/fw658.jpg" alt="">
+      </div>
+
+  </div>
+</body>
+<script src="index.js"></script>
+<script>
+    window.onload=function(){
+      let kaishi=document.querySelector('.kaishi');
+      let tupian = document.querySelector('.tupian')
+      let snake = new Snake();
+      kaishi.onclick=function(){
+          tupian.style.display='none';
+          kaishi.style.display='none';
+          snake.start();
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+</script>
+</html>

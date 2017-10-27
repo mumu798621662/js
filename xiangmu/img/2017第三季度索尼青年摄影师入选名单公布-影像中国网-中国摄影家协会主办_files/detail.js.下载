@@ -1,0 +1,28 @@
+(function(){
+	function Follow(container){
+		this.el=container.el;
+	}
+	Follow.prototype.init=function(){
+		var offset=$(this.el).offset(),
+			el=this.el;
+		$(window).scroll(function() {
+		 	var top=$(this).scrollTop(),
+		 		state=$(el).hasClass('fixed');
+		 	console.log(offset.left);
+		 	if(top>offset.top){
+		 		if(!state){
+		 			$(el).addClass('fixed');
+		 			$(el).css({left:offset.left});
+		 			console.log(offset.top);
+		 		}else{
+		 			return null;
+		 		}
+		 	}else{
+		 		$(el).removeClass('fixed');
+		 	}
+		});
+
+
+	}
+	new Follow({el:'#follow'}).init();
+})(jQuery);

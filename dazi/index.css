@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width：100%;
+    height:100%;
+}
+body{
+    background: url('img/bj.jpg') no-repeat center center / cover;
+}
+.div1{
+    width:56px;
+    height:80px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:absolute;
+    border-radius: 50%;
+    top:0;
+    left:0;
+    font-size:20px;
+    text-align: center;
+    line-height: 60px;
+}
+.score{
+    width:100px;
+    height:30px;
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:url("img/zbj1.jpg") center/cover;
+    text-align: center;
+    line-height: 30px;
+    color:#0e2021;
+    border-radius: 10px;
+}
+.life{
+    width:100px;
+    height:30px;
+    position:absolute;
+    top:60px;
+    left:20px;
+    background:url("img/zbj2.png") center/cover;
+    text-align: center;
+    line-height: 30px;
+    color:#232323;
+    border-radius:10px;
+}
+.kaishi{
+    width:300px;
+    height:80px;
+    background: url("img/zbj31.png") no-repeat center/cover;
+    margin:280px auto;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 42px;
+    cursor: pointer;
+}

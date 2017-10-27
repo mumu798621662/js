@@ -1,0 +1,330 @@
+@import url('base.css');
+header{
+    width:100%;
+    height: 107px;
+    background: #1d1825;
+    margin-bottom: 50px;
+}
+.name{
+    width: 218px;
+    height:100%;
+    font-size: 38px;
+    text-align: center;
+    line-height: 107px;
+    color:#fff;
+    margin-left: 86px;
+    float: left;
+
+}
+.daohang{
+    width:600px;
+    height:23px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 41px;
+}
+.daohang>li{
+    width: 80px;
+    height:23px;
+    float: left;
+    margin-right: 18px;
+    /*font-size: 16px;*/
+    line-height:16px;
+    color:#fff;
+    position: relative;
+    text-align: center;
+}
+.daohang li a{
+    display: block;
+    width: 80px;
+    height: 23px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.5s;
+    text-align: center;
+}
+.hengxian{
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.hengxian2{
+    width: 70px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*.daohang>li:last-child{*/
+/*margin-right: 0;*/
+/*}*/
+.iconbox{
+    width:110px;
+    height:18px;
+    margin-top:42px;
+    margin-right:86px;
+    float: right;
+}
+.iconbox li{
+    color:#fff;
+    float: left;
+    margin-right: 28px;
+    cursor:pointer;
+}
+.iconbox>li:last-child{
+    margin-right: 0;
+}
+.iconbox>li:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+/*头部结束*/
+
+.fanhui{
+    width: 400px;
+    height:30px;
+    background: #DDDDDD;
+    margin-left: 118px;
+    margin-bottom: 30px;
+}
+.lianjie{
+    display: block;
+    width: 100px;
+    height:100%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color:#000;
+}
+.lianjie1{
+    width: 300px;
+    height:100%;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color:#000;
+}
+/*详情开始*/
+.xiangqing{
+    width: 1111px;
+    height: auto;
+    background: #ccc;
+    margin: 0 auto;
+}
+.xiangqing-left{
+    width: 300px;
+    height:350px;
+    background: #c8c6c6;
+    float: left;
+    padding:10px;
+    margin-right: 11px;
+}
+h3{
+    margin-bottom: 20px;
+}
+h4{
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.fenxiang{
+    width: 100%;
+    height:auto;
+
+}
+.fenxiangicon{
+    width: 220px;
+    height: 21px;
+    float: right;
+}
+.fenxiangicon>div{
+    float: left;
+    font-size: 21px;
+    margin-right: 10px;
+}
+.xiangqing-right{
+    width:800px;
+    height: auto;
+    padding:30px;
+    float: right;
+}
+.xiangqing-right span{
+    display: block;
+    width: 740px;
+    height: auto;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.xiangqing-right h4{
+    text-align: center;
+}
+.tu1,.tu2,.tu3{
+    width: 433px;
+    height: 650px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.tu1 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.tu2 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.tu3 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*详情结束*/
+/*底部开始*/
+footer{
+    width: 100%;
+    height:376px;
+    background:#24202a;
+    overflow: hidden;
+}
+.dibu{
+    width:1140px;
+    height: 224px;
+    background:#24202a;
+    margin:56px auto;
+    border-bottom: 1px solid #57545b;
+}
+.dibu-left{
+    width: 388px;
+    height: 222px;
+    background:#24202a;
+    overflow: hidden;
+    float: left;
+}
+.dibu-left-left{
+    width: 168px;
+    height: 30px;
+    float:left;
+    margin-right: 94px;
+    font-size: 30px;
+    color:#fff;
+}
+.dibu-icon{
+    width: 126px;
+    height: 30px;
+    float: right;
+    background:#24202a;
+
+}
+.dibu-icon .icon-facebookf{
+    float: left;
+    font-size: 20px;
+    color:#fff;
+    line-height: 40px;
+    margin-right: 30px;
+}
+.dibu-icon .icon-tuite{
+    float: left;
+    font-size: 20px;
+    color:#fff;
+    line-height: 40px;
+    margin-right: 30px;
+
+}
+.dibu-icon .icon-leaf{
+    float: left;
+    font-size: 20px;
+    color:#fff;
+    line-height: 40px;
+}
+.icon-facebookf:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.icon-tuite:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.icon-leaf:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.dibuwenzi{
+    display: block;
+    width: 387px;
+    height: 71px;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 64px;
+    text-align: center;
+    line-height: 22px;
+}
+.dibu-right{
+    width: 650px;
+    height: 222px;
+    background:#24202a;
+    float: right;
+}
+.db1{
+    width: 150px;
+    height: 222px;
+    float: left;
+    margin-left: 12px;
+    margin-right: 134px;
+}
+.dibu-right-title1{
+    width: 164px;
+    height: 30px;
+    font-size: 26px;
+    margin-bottom: 16px;
+    color: #12c3c6;
+}
+.db1 dd{
+    width: 150px;
+    height: 11px;
+    margin-bottom: 14px;
+}
+.db1 dd a{
+    color: #fff;
+
+}
+.db2{
+    width: 150px;
+    height: 222px;
+    float: left;
+}
+.dibu-right-title2{
+    width: 199px;
+    height: 30px;
+    font-size: 26px;
+    margin-bottom: 16px;
+    color: #12c3c6;
+    margin-left: 12px;
+    margin-right: 134px;
+}
+.db2 dd{
+    width: 222px;
+    height: 11px;
+    margin-bottom: 19px;
+    margin-left: 12px;
+    margin-right: 134px;
+    color: #fff;
+}
+.dibu-bottom{
+    display: block;
+    width: 494px;
+    height: 14px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 14px;
+    color: #fff;
+    margin: 0 auto;
+}

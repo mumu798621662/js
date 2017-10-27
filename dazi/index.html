@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<div class="score">分数:<span>0</span></div>
+<div class="life">生命:<span>10</span></div>
+<div class="kaishi">开始游戏</div>
+</body>
+<script>
+    window.onload = function() {
+        let kaishi=document.querySelector('.kaishi');
+        let game = new Game();
+        kaishi.onclick=function(){
+            game.start();
+            this.style.display='none'
+        }
+
+
+
+    }
+</script>
+</html>

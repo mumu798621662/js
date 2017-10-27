@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height:100%;
+}
+.desk{
+    width: 700px;
+    height:700px;
+    /*background: red;*/
+    margin:10px auto;
+    position: relative;
+
+}
+.poke{
+    width: 90px;
+    height: 120px;
+    background: #fff;
+    position:absolute;
+    border-radius: 5px;
+    top:0;
+    left:300px;
+}
+.active{
+    box-shadow:0 0 0 5px black ;
+}
+.btnL{
+    width: 80px;
+    height: 30px;
+    background:deepskyblue;
+    border-radius:50%;
+    position:absolute;
+    top: 520px;
+    left:310px;
+    text-align: center;
+}
+.btnR {
+    width: 80px;
+    height: 30px;
+    background:deepskyblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 580px;
+    left: 310px;
+    text-align: center;
+}
+b{
+    display: block;
+    margin: 5px auto;
+}
+body{
+   background: url("img/mqmsitmlkkh.jpg") center / cover;
+   overflow: hidden;
+}
+</style>
+<body>
+<div class="desk">
+    <div class="btnL"><b>&gt</b></div>
+    <div class="btnR"><b>&lt</b></div>
+</div>
+</body>
+</html>
+<script>
+//产生扑克
+$(function(){
+
+//    产生扑克牌
+    let color = ['a','b','c','d'];
+    let poke=[];
+    let flag={};
+    let hua;
+    let num;
+    while(poke.length<52){
+       hua = color[Math.floor(Math.random()*4)];
+       num =Math.floor(Math.random()*13+1);
+        if(!flag[`${hua}_${num}`]){
+             poke.push({hua,num});
+             flag[`${hua}_${num}`]=true;
+        }
+    }
+//    console.log(poke)
+let index=0;
+for(let i =0;i<7;i++){
+   for(let j=0;j<=i;j++){
+    let left = 300-50*i+100*j;
+    let top = 60*i;
+    $('<div>').appendTo($('.desk')).addClass('poke').attr('num',`${poke[index].num}`).attr('id',`${i}_${j}`).css('background',`url(img/${poke[index].num}${poke[index].hua}.png) center center/cover`).delay(index*10).animate({left,top})
+       index++;
+    }
+}
+
+for(;index<poke.length;index++){
+    $('<div>').appendTo($('.desk')).addClass('poke lefts').attr('num',`${poke[index].num}`).attr('id',`${-2}_${-2}`).css('background',`url(img/${poke[index].num}${poke[index].hua}.png) center center/cover`).delay(index*10).animate({left:50,top:500})
+}
+
+
+let first=null;
+$('.desk').on('click','.poke',function(e){
+
+    let element=$(e.target);
+    let ids = element.attr('id').split('_');
+    let ele1= `#${ids[0]*1+1}_${ids[1]*1}`;
+    let ele2= `#${ids[0]*1+1}_${ids[1]*1+1}`;
+    if($(ele1).length || $(ele2).length){
+        return;
+    }
+
+    element.toggleClass('active');
+    if(element.hasClass('active')){
+        element.animate({top:'-=20'})
+    }
+    else {
+        element.animate({top: '+=20'});
+    }
+
+
+    if(!first){
+        first=element
+
+    }else{
+        if(first.attr('num')*1+element.attr('num')*1===14){
+            $('.active').animate({top:0,left:560},function(){
+                this.remove()
+//                $(this).removeClass('active')
+            })
+        }else{
+            $('.active').animate({top:'+=20'});
+            $('.active').removeClass('active')
+        }
+         first=null;
+    }
+})
+
+let zindex=0;
+$('.btnL').on('click',function(){
+    if(!$('.lefts').length){
+        return
+    }
+    $('.lefts').css('zIndex',zindex++).last().animate({left:550}).removeClass('lefts').addClass('rights')
+
+});
+
+$('.btnR').on('click',function(){
+    if(!$('.rights').length){
+        return
+    }
+
+        $('.rights').css('zIndex',zindex++).last().animate({left:50}).removeClass('rights').addClass('lefts')
+})
+
+
+
+
+
+
+
+
+})
+
+</script>

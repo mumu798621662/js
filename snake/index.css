@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+html,body{
+   width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sence{
+    width:600px;
+    height:600px;
+    margin:20px auto;
+    background:url("img/4987505fc73c6dc97de39f038494447a5070dde259c101-I5MNv0_fw658.jpg") no-repeat center/cover!important;
+    position:relative;
+
+}
+.box{
+    width:29px;
+    height: 29px;
+    margin-right:1px;
+    margin-bottom:1px;
+    float: left;
+}
+.hot{
+    background:#df5000!important;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border:6px solid darkorange;
+
+}
+.kaishi{
+    width: 300px;
+    height: 60px;
+    position:absolute;
+    left:150px;
+    top:158px;
+    z-index: 999;
+    border-radius:30px;
+    cursor: pointer;
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    background: url("img/zbj31.png") no-repeat center/cover;
+}
+.tupian{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+.tupian img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
